@@ -17,3 +17,12 @@ describe('GET /', function() {
       .expect('Content-Type',/html/)
   })
 })
+
+describe('GET nonexistent', function() {
+  it('return a 404 response', function(){
+    return request(app)
+      .get('/nonexistent')
+      .expect(404)
+      .expect('Content-Type',/html/)
+  })
+})
