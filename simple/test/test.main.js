@@ -18,7 +18,16 @@ describe('things for strings', function () {
 describe('things for arrays', function () {
     describe('tribonacci', function () {
       it('should return trib sequence', function () {
-        assert.equal(arrays([1,1,1], 'trib', 10).toString(), [1,1,1,3,5,9,17,31,57,105].toString());
+        assert.equal(arrays([3,2,1], 'trib', 10).toString(), [3,2,1,6,9,16,31,56,103,190].toString());
+      });
+      it('should return [] for a param of 0', function () {
+        assert.equal(arrays([3,2,1], 'trib', 0).toString(), [].toString());
+      });
+      it('should return first item for a param of 1', function () {
+        assert.equal(arrays([3,2,1], 'trib', 1).toString(), [3].toString());
+      });
+      it('should return first 2 items for a param of 2', function () {
+        assert.equal(arrays([3,2,1], 'trib', 2).toString(), [3,2].toString());
       });
     });
     describe('missing actions for arrays', function () {
