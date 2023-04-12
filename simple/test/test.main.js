@@ -6,8 +6,10 @@ describe('things for strings', function () {
     it('should return olleh', function () {
       assert.equal(app('hello', 'reverse'), 'olleh');
     });
+  });
+  describe('missing actions for strings', function (){
     it('should return -1 for missing actions', function () {
         assert.equal(app('hello', 'nonexistent'), -1);
       });
-  });
+  })
 });
