@@ -1,7 +1,7 @@
 
 var app = (array, action, param = null) => {
     if(action === "trib") {
-        // return [1,1,1,3,5,9,17,31,57,105]
+        // https://www.codewars.com/kata/556deca17c58da83c00002db/solutions/javascript
         let out = array
         if (param === 0) {
             return []
